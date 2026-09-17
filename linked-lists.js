@@ -74,7 +74,7 @@ export class LinkedList {
     if (!this.head) {
       return;
     }
-    const value = this.head.value;
+    const value = this.head.data;
     this.head = this.head.next;
     return value;
   }
