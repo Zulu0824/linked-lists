@@ -1,11 +1,11 @@
-class Node {
+export class Node {
   constructor(data) {
     this.data = data;
     this.next = null;
   }
 }
 
-class LinkedList {
+export class LinkedList {
   constructor() {
     this.head = null;
   }
@@ -43,7 +43,7 @@ class LinkedList {
     if (!this.head) {
       return;
     } else {
-      return this.head.value;
+      return this.head.data;
     }
   }
 
@@ -55,7 +55,7 @@ class LinkedList {
       while (current.next !== null) {
         current = current.next;
       }
-      return current.value;
+      return current.data;
     }
   }
 
@@ -66,7 +66,7 @@ class LinkedList {
       current = current.next;
       count++;
     }
-    return current.value;
+    return current.data;
   }
 
   pop() {
@@ -107,7 +107,7 @@ class LinkedList {
     let current = this.head;
     let result = "";
     while (current !== null) {
-      result += `(${current.value}) ->`;
+      result += `(${current.data}) ->`;
       current = current.next;
     }
     result += "null";
