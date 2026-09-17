@@ -38,4 +38,12 @@ class LinkedList {
     }
     return count;
   }
+
+  getHead() {
+    if (!this.head) {
+      return;
+    } else {
+      return this.head.value;
+    }
+  }
 }
