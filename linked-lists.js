@@ -58,4 +58,14 @@ class LinkedList {
       return current.value;
     }
   }
+
+  at(index) {
+    let count = 0;
+    let current = this.head;
+    while (index !== count) {
+      current = current.next;
+      count++;
+    }
+    return current.value;
+  }
 }
