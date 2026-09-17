@@ -113,4 +113,23 @@ class LinkedList {
     result += "null";
     return result;
   }
+
+  removeAt(index) {
+    if (index < 0 || index >= this.size()) {
+      throw new RangeError("Index out of bounds");
+    }
+
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    let previous = this.head;
+    let count = 0;
+    while (count < index - 1) {
+      previous = previous.next;
+      count++;
+    }
+    previous.next = previous.next.next;
+  }
 }
