@@ -68,4 +68,25 @@ class LinkedList {
     }
     return current.value;
   }
+
+  pop() {
+    let current = this.head;
+    if (!this.head) {
+      return;
+    }
+    const value = this.head.value;
+    this.head = this.head.next;
+    return value;
+  }
+
+  contains(value) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.data === value) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
 }
